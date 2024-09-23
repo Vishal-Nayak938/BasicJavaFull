@@ -5,22 +5,26 @@ public class MainPoly {
     {
         car c=new car();
         Plane p=new Plane();
-        vehicle v=new car();
+        vehicle v=new car();//upcasting of an object
+        System.out.println(p.equals(p));
 //        castTest(v);
-        castTest(c);
-//        castTest(p);
+//        castTest(c);
+        castTest(p);
 
-//        car c=(car)new vehicle();
+//        car c=(car)new vehicle();//down casting
 //        vehicle v2=new Plane();
 //        v2.goToPlace();
-//        Object p=new vehicle();
+//        Object p=new vehicle();//object is parent of all the classes
 //          c.noOfDoors();
     }
 
     private static void castTest(vehicle veh)//vehicle can take also car ref
     // because it is a class(datatype like: int ,String) so it can take a class type reference
     {
-       car cveh =(car)veh;//downcasting simply same as datatypes like: int ,char, double
-        System.out.println(cveh.fuelLevel());
+        veh.noOfDoors();
+        Plane cveh =(Plane)veh;//down casting simply same as datatypes like: int ,char, double
+    cveh.goToPlace();
+    cveh.noOfDoors();
+
     }
 }

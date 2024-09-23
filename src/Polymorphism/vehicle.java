@@ -1,15 +1,12 @@
 package Polymorphism;
 
-public class vehicle {//parent class
+public abstract class vehicle {//parent class
     void goToPlace()
     {
         System.out.println("A vehicle can go one place to another place!");
     }
 
-    void start()
-    {
-        System.out.println("vehicle is started!");
-    }
+   abstract void start();
 
     void noOfDoors()
     {
